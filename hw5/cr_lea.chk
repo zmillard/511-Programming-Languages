@@ -1,0 +1,94 @@
+0: Down - program non-accepting [pids 0-0]
+	New state 0
+  0: proc 0 exec 3, 32 to 20, I = 1 atomic  non-accepting [tau=0]
+1: Down - program non-accepting [pids 0-0]
+  1: proc 0 exec 4, 20 to 15, ((I<=5)) atomic  non-accepting [tau=8]
+2: Down - program non-accepting [pids 0-0]
+  2: proc 0 exec 5, 15 to 20, (((Ini[0]==0)&&(5>=1))) atomic  non-accepting [tau=8]
+3: Down - program non-accepting [pids 0-0]
+  3: proc 0 exec 4, 20 to 15, ((I<=5)) atomic  non-accepting [tau=8]
+4: Down - program non-accepting [pids 0-0]
+  4: proc 0 exec 6, 15 to 20, (((Ini[1]==0)&&(5>=2))) atomic  non-accepting [tau=8]
+5: Down - program non-accepting [pids 0-0]
+  5: proc 0 exec 4, 20 to 15, ((I<=5)) atomic  non-accepting [tau=8]
+6: Down - program non-accepting [pids 0-0]
+  6: proc 0 exec 7, 15 to 20, (((Ini[2]==0)&&(5>=3))) atomic  non-accepting [tau=8]
+7: Down - program non-accepting [pids 0-0]
+  7: proc 0 exec 4, 20 to 15, ((I<=5)) atomic  non-accepting [tau=8]
+8: Down - program non-accepting [pids 0-0]
+  8: proc 0 exec 8, 15 to 20, (((Ini[3]==0)&&(5>=4))) atomic  non-accepting [tau=8]
+9: Down - program non-accepting [pids 0-0]
+  9: proc 0 exec 4, 20 to 15, ((I<=5)) atomic  non-accepting [tau=8]
+10: Down - program non-accepting [pids 0-0]
+ 10: proc 0 exec 9, 15 to 20, (((Ini[4]==0)&&(5>=5))) atomic  non-accepting [tau=8]
+11: Down - program non-accepting [pids 0-0]
+ 11: proc 0 exec 12, 20 to 29, ((I>5)) atomic  non-accepting [tau=8]
+12: Down - program non-accepting [pids 0-0]
+ 12: proc 0 exec 14, 29 to 25, ((proc<=5)) atomic  non-accepting [tau=8]
+13: Down - program non-accepting [pids 0-0]
+ 13: proc 0 exec 15, 25 to 26, (run nnode(q[(proc-1)],q[(proc%5)],Ini[(proc-1)])) atomic  non-accepting [tau=8]
+14: Down - program non-accepting [pids 0-0]
+ 14: proc 0 exec 16, 26 to 29, proc = (proc+1) atomic  non-accepting [tau=8]
+15: Down - program non-accepting [pids 0-0]
+ 15: proc 0 exec 14, 29 to 25, ((proc<=5)) atomic  non-accepting [tau=8]
+16: Down - program non-accepting [pids 0-0]
+ 16: proc 0 exec 15, 25 to 26, (run nnode(q[(proc-1)],q[(proc%5)],Ini[(proc-1)])) atomic  non-accepting [tau=8]
+17: Down - program non-accepting [pids 0-0]
+ 17: proc 0 exec 16, 26 to 29, proc = (proc+1) atomic  non-accepting [tau=8]
+18: Down - program non-accepting [pids 0-0]
+ 18: proc 0 exec 14, 29 to 25, ((proc<=5)) atomic  non-accepting [tau=8]
+19: Down - program non-accepting [pids 0-0]
+ 19: proc 0 exec 15, 25 to 26, (run nnode(q[(proc-1)],q[(proc%5)],Ini[(proc-1)])) atomic  non-accepting [tau=8]
+20: Down - program non-accepting [pids 0-0]
+ 20: proc 0 exec 16, 26 to 29, proc = (proc+1) atomic  non-accepting [tau=8]
+21: Down - program non-accepting [pids 0-0]
+ 21: proc 0 exec 14, 29 to 25, ((proc<=5)) atomic  non-accepting [tau=8]
+22: Down - program non-accepting [pids 0-0]
+ 22: proc 0 exec 15, 25 to 26, (run nnode(q[(proc-1)],q[(proc%5)],Ini[(proc-1)])) atomic  non-accepting [tau=8]
+23: Down - program non-accepting [pids 0-0]
+ 23: proc 0 exec 16, 26 to 29, proc = (proc+1) atomic  non-accepting [tau=8]
+24: Down - program non-accepting [pids 0-0]
+ 24: proc 0 exec 14, 29 to 25, ((proc<=5)) atomic  non-accepting [tau=8]
+25: Down - program non-accepting [pids 0-0]
+ 25: proc 0 exec 15, 25 to 26, (run nnode(q[(proc-1)],q[(proc%5)],Ini[(proc-1)])) atomic  non-accepting [tau=8]
+26: Down - program non-accepting [pids 0-0]
+ 26: proc 0 exec 16, 26 to 29, proc = (proc+1) atomic  non-accepting [tau=8]
+27: Down - program non-accepting [pids 0-0]
+ 27: proc 0 exec 17, 29 to 31, ((proc>5)) atomic  non-accepting [tau=8]
+28: Down - program non-accepting [pids 0-0]
+ 28: proc 0 exec 1, 31 to 33, break   non-accepting [tau=8]
+29: Down - program non-accepting [pids 5-0]
+	New state 1
+pan:1: too few parameters in send stmnt (at depth 29)
+pan: wrote cr_lea.pml.trail
+
+(Spin Version 6.4.7 -- 16 July 2017)
+Warning: Search not completed
+
+Full statespace search for:
+	never claim         	- (none specified)
+	assertion violations	+
+	cycle checks       	- (disabled by -DSAFETY)
+	invalid end states	+
+
+State-vector 192 byte, depth reached 29, errors: 1
+        2 states, stored
+        0 states, matched
+        0 matches within stack
+        2 transitions (= stored+matched)
+       28 atomic steps
+hash conflicts:         0 (resolved)
+stackframes: 0/0
+
+stats: fa 0, fh 0, zh 0, zn 0 - check 0 holds 0
+stack stats: puts 0, probes 0, zaps 0
+Stats on memory usage (in Megabytes):
+    0.000	equivalent memory usage for states (stored*(State-vector + overhead))
+    0.288	actual memory usage for states
+   64.000	memory used for hash table (-w24)
+    0.305	memory used for DFS stack (-m10000)
+   64.501	total actual memory usage
+
+
+
+pan: elapsed time 0.006 seconds

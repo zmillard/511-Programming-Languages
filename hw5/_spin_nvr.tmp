@@ -1,0 +1,7 @@
+never p1 {    /* !(<> ((nr_leaders==1))) */
+accept_init:
+T0_init:
+	do
+	:: (! (((nr_leaders==1)))) -> goto T0_init
+	od;
+}

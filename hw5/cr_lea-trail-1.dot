@@ -1,0 +1,5 @@
+digraph "C:\Program Files\erl9.1\bin\511\hw5\cr_lea-trail-1" {
+	graph [size="12.5,7.5",ranksep=.20];
+	node [shape=box,fontname=Helvetica,fontsize=10];
+	node [width=1.25,height=0.75,fixedsize=true];
+}
